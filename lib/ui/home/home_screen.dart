@@ -5,11 +5,13 @@ import 'package:flutter_solid_tamplate/ui/home/widgets/generate_random_color_but
 import 'package:flutter_solid_tamplate/ui/home/widgets/reset_to_default_color_button.dart';
 
 /// default screen of our application
+@Deprecated("unneeded according to test task")
 class HomeScreen extends StatelessWidget {
   /// value required for named routes
   static const String id = '/home_screen';
 
-  /// default home screen widget constructor (no dependencies required) "key"
+  /// default home screen widget constructor (no dependencies required)
+  @Deprecated("unneeded according to test task")
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
