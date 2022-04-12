@@ -17,9 +17,6 @@ class Bloc<Event, State> extends StateStreamer<State> with Sink<Event> {
   /// because initial state value is required in default constructor)
   State _state;
 
-  // ignore: prefer_final_fields
-  bool _emitted = false;
-
   StreamController<Event> get _eventSC {
     return _eventStreamController ??= StreamController<Event>.broadcast();
   }
@@ -72,10 +69,10 @@ class Bloc<Event, State> extends StateStreamer<State> with Sink<Event> {
 
   /// emits new unique state
   /// must not be called explicitly
-  /// ignores repeating states except initial one
+  /// ignores repeating states
   void _emit(State state) {
-    // ignores repeating states except initial one
-    if (_state == state && _emitted) return;
+    // ignores identical repeating states
+    if (_state == state) return;
     _state = state;
     _addState(state);
   }
