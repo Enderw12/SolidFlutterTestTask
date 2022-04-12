@@ -1,10 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-/// My name is RandomColorGenerator. After five years on a hellish island,
-/// I have come home with only one goal … to implement [randomColor] feature.
-/// https://en.wikipedia.org/wiki/Arrow_(TV_series)
-/// Season 2 intro monologue by Oliver Queen
+/// [RandomColorGenerator] provides tools for generation of random colors
 class RandomColorGenerator {
   /// generate new random [Color] object
   static Color get randomColor {

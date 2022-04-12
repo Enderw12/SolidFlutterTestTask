@@ -5,12 +5,13 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_solid_tamplate/pkg/bloc/state_streamer.dart';
 import 'package:provider/provider.dart';
 
-/// builder widget
+/// builder widget similar to [StreamBuilder]
 class BlocBuilder<B extends StateStreamer<S>, S> extends StatefulWidget {
-  /// builder function
+  /// builder method similar to builder of [StreamBuilder]
   final Widget Function(BuildContext context, S state) builder;
 
-  ///
+  /// reactive builder
+  /// which requires a [Bloc] of type [B] injected with [Provider] before usage
   const BlocBuilder({
     required this.builder,
   });
@@ -30,6 +31,7 @@ class _BlocBuilderState<B extends StateStreamer<S>, S>
   void initState() {
     subscription = _bloc.stream.listen((state) {
       setState(() {
+        // TODO: remove during next refactoring cycle
         log('New state arrived with value == $state');
       });
     });

@@ -1,6 +1,6 @@
 part of 'color_bloc.dart';
 
-/// meaningless ancestor for all events =)
+/// base ancestor for all event types
 abstract class ColorEvent {}
 
 /// request to reset to [InitialColorState]

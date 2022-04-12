@@ -1,14 +1,14 @@
 part of 'color_bloc.dart';
 
-/// background color
+/// base interface for every ColorBloc state-type
 abstract class ColorState {
-  /// background color
+  /// background color (according to test task)
   Color get color;
 }
 
-/// default color is blue
+/// default color is [defaultColor]
 class InitialColorState extends ColorState with ColorValueToString {
-  /// default color is blue
+  /// default color is [defaultColor]
   @override
   Color get color => defaultColor;
 
@@ -24,7 +24,7 @@ class NewColorState extends ColorState with ColorValueToString {
   @override
   final Color color;
 
-  ///
+  /// nothing to explain here i guess
   NewColorState(this.color);
 }
 
