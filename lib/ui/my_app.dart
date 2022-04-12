@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_solid_tamplate/bloc/color_generator/color_bloc.dart';
 import 'package:flutter_solid_tamplate/ui/hello_screen/hello_screen.dart';
-import 'package:flutter_solid_tamplate/ui/home/home_screen.dart';
 import 'package:flutter_solid_tamplate/ui/theme/themes.dart';
 import 'package:provider/provider.dart';
 
@@ -26,8 +25,6 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.system,
         initialRoute: HelloScreen.id,
         routes: {
-          // TODO: remove unused routes with next refactoring cycle
-          HomeScreen.id: (context) => const HomeScreen(),
           HelloScreen.id: (context) => const HelloScreen(),
         },
       ),

@@ -51,7 +51,7 @@ class Bloc<Event, State> extends StateStreamer<State> with Sink<Event> {
   ) {
     if (_handlers.any((handler) => handler.type == E)) {
       final message =
-          'handler of type ${_eventHandler.runtimeType} already added to bloc $runtimeType';
+          'handler of type ${_eventHandler.runtimeType} already added to bloc';
       Error.throwWithStackTrace(Exception(message), StackTrace.current);
     }
 

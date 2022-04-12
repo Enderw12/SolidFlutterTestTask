@@ -11,7 +11,7 @@ class BlocBuilder<B extends StateStreamer<S>, S> extends StatefulWidget {
   final Widget Function(BuildContext context, S state) builder;
 
   /// reactive builder
-  /// which requires a [Bloc] of type [B] injected with [Provider] before usage
+  /// which requires a bloc of type [B] injected with [Provider] before usage
   const BlocBuilder({
     required this.builder,
   });
